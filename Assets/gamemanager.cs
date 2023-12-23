@@ -12,11 +12,16 @@ public class gamemanager : MonoBehaviour
     public GameObject player;
     public Text TextoCoins;
     private int coins;
+    public GameObject Life;
+    public GameObject Life2;
+    public GameObject Life3;
+    public int vidas;
     
 
     void Start()
     {
         puntos = 0;
+        vidas = 3;
 
         PosicionInicial();
        
@@ -25,7 +30,19 @@ public class gamemanager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (vidas <= 0)
+        {
+            Destroy(player);
+            Destroy(Life3);
+        }
+        if (vidas <= 2)
+        {
+            Destroy(Life);
+        }
+        if (vidas <= 1)
+        {
+            Destroy(Life2);
+        }
     }
 
     public void sumapuntos(int pts)
@@ -45,6 +62,13 @@ public class gamemanager : MonoBehaviour
         coins++;
         puntos += 10;
         TextoCoins.text = coins.ToString();
+    }
+    public void pierdeVidas()
+    {
+        vidas -= 1;
+        
+       
+
     }
 
 }

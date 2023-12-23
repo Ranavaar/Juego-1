@@ -6,6 +6,9 @@ TagManager:
   tags:
   - gameManager
   - Grounded
+  - Life
+  - UIcontrol
+  - Puntos
   layers:
   - Default
   - TransparentFX

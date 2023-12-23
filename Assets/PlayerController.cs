@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Video;
 
 public class PlayerController : MonoBehaviour
 {
@@ -59,6 +60,7 @@ public class PlayerController : MonoBehaviour
             isGrounded = false;
 
         }
+        
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {

@@ -22,6 +22,12 @@ public class picho : MonoBehaviour
 
             manager.GetComponent<gamemanager>().PosicionInicial();
 
+            manager.GetComponent<gamemanager>().pierdeVidas();
+
         }
+                     
+
+        
+
     }
 }
