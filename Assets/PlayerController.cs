@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
+using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class PlayerController : MonoBehaviour
 {
@@ -16,11 +17,12 @@ public class PlayerController : MonoBehaviour
     public float VyActual;
 
     public bool isGrounded;
-   
+
+
 
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -51,7 +53,7 @@ public class PlayerController : MonoBehaviour
             }
 
         }
-        if ((Input.GetKeyDown("up") || Input.GetKey("w"))&& isGrounded == true)
+        if ((Input.GetKeyDown("up") || Input.GetKey("w")) && isGrounded == true)
         {
 
 
@@ -60,18 +62,13 @@ public class PlayerController : MonoBehaviour
             isGrounded = false;
 
         }
-        
-    }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        //print("colosion normal");
+
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Grounded")
-        isGrounded = true;
-       
+        if (collision.gameObject.tag == "Grounded")
+            isGrounded = true;
     }
-    
+
 
 }
